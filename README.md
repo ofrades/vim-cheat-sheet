@@ -1,11 +1,10 @@
-# Vim Cheat Sheet
-Vim cheat sheet, useful commands compatible with `vscodevim` for Microsoft Visual Studio Code.
+<h2 align="center"><img src="https://raw.githubusercontent.com/VSCodeVim/Vim/master/images/icon.png" height="128"><br>VSCodeVim</h2>
+<p align="center"><strong>Vim Cheat Sheet for Visual Studio Code</strong></p>
 
 ## Vim as Language
 
-
 ### Commands
-Vim commands are formed from a combination of verbs and targets.The targets could be objects (words, sentences, paragraphs, lines, the contents of parentheses) or movements (jump to end of word, jump to end of paragraph, jump forward until the letter ‘e’, etc).
+Vim commands are formed from a combination of verbs and targets. The targets could be objects (words, sentences, paragraphs, lines, the contents of parentheses) or movements (jump to end of word, jump to end of paragraph, jump forward until the letter ‘e’, etc).
 Forming objects generally involves the use of a modifier. You can also add a count to perform the action count times.
 
 | Verbs | Use | 
@@ -37,7 +36,7 @@ Forming objects generally involves the use of a modifier. You can also add a cou
 | i | inside |
 | a | around |
 | t | till..finds a character |
-| f | ind..like till except including the char |
+| f | find..like till except including the char |
 | / | search..find a string/regex |
 
 | Text objects | Use | 
@@ -48,14 +47,12 @@ Forming objects generally involves the use of a modifier. You can also add a cou
 | b | block/parentheses |
 | t | tag, works for html/xm |
 
-
-
 ## Useful
 
 | Command | Use | 
 | - | - | 
-|vi[char]| visualize all content inside that cahracters excluding delimiter |
-|va[char]| visualize all content inside that cahracters including delimiter |
+|vi[char]| visualize all content inside that characters excluding delimiter |
+|va[char]| visualize all content inside that characters including delimiter |
 | vi{ | select all content inside curly braces excluding braces |
 | va{ | select all content inside curly braces including braces |
 | viw | select world under the cursor |
