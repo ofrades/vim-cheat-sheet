@@ -21,7 +21,6 @@
   - [Operators Examples](#OperatorsExamples)
   - [Text Objects](#TextObjects)
   - [TextObjectsUsageExamples](#TextObjectsExamples)
-- [Misc](#Misc)
 - [Folds](#Folds)
 - [Advanced Navigation](#AdvancedNavigation)
 - [Jumping](#Jumping)
@@ -46,6 +45,7 @@
 | `:wq` _/_ `:x` | Save and close file              |
 | `:q`           | Close file                       |
 | `:q!`          | Close file, abandon changes      |
+| `.`            | Repeat last command              |
 
 ### Navigating
 
@@ -251,15 +251,6 @@ Text objects let you operate (with an _operator_) in or around text blocks (_obj
 | ---         | ---                                |
 | `dip`       | Delete inner paragraph             |
 | `cip`       | Change inner paragraph             |
-
-## Misc
-
-| Shortcut   | Description                                       |
-| ---------- | ------------------------------------------------- |
-| `.`        | Repeat last command                               |
-| `]p`       | Paste under the current indentation level         |
-| ---        | ---                                               |
-| `:ff=unix` | Convert Windows line endings to Unix line endings |
 
 ### Folds
 
