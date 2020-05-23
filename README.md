@@ -1,289 +1,374 @@
 <h2 align="center"><img src="https://raw.githubusercontent.com/VSCodeVim/Vim/master/images/icon.png" height="128"><br>VSCodeVim</h2>
 <p align="center"><strong>Vim Cheat Sheet for Visual Studio Code</strong></p>
 
-## Vim as Language
-
-### Commands
-Vim commands are formed from a combination of verbs and targets. The targets could be objects (words, sentences, paragraphs, lines, the contents of parentheses) or movements (jump to end of word, jump to end of paragraph, jump forward until the letter ‘e’, etc).
-Forming objects generally involves the use of a modifier. You can also add a count to perform the action count times.
-
-| Verbs | Use | 
-| - | - | 
-| v | visual |
-| c | change |
-| d | delete (remove from the document and put in buffer) |
-| dd | delete current line |
-| y | yank/copy |
-| yy | yank/copy the line) |
-| i | enter insert mode |
-| I | enter insert mode at the beginning of the line |
-| v | enter visual mode |
-| V | enter visual line (selects the current line in one key stroke) |
-| p | paste the buffer after the cursor |
-| P | paste the buffer before the cursor |
-| r | replace the character under the cursor with [char] |
-| s | deletes the character under the curser and puts you into insert mode |
-| x | delete the character under the cursor |
-| u | undo the last command |
-| a | append - enter insert mode after the carat | 
-| A | append to line (enter insert mode at the end of the line) | 
-| o | open a line after the current one and enter insert mode |
-| O | open a line before the current one and enter insert mode |
-
-
-| Modifiers | Use | 
-| - | - |
-| i | inside |
-| a | around |
-| t | till..finds a character |
-| f | find..like till except including the char |
-| / | search..find a string/regex |
-
-| Text objects | Use | 
-| - | - |
-| w | word |
-| s | sentence |
-| p | paragraph |
-| b | block/parentheses |
-| t | tag, works for html/xm |
-
-## Useful
-
-| Command | Use | 
-| - | - | 
-|vi[char]| visualize all content inside that characters excluding delimiter |
-|va[char]| visualize all content inside that characters including delimiter |
-| vi{ | select all content inside curly braces excluding braces |
-| va{ | select all content inside curly braces including braces |
-| viw | select world under the cursor |
-| vit | visually select text in a tag |
-| vat | visually select text around a tag |
-| Ctrl-R | redo the last undo (sidenote: in vim undo/redo forms a tree, changes aren’t lost) |
-| Ctrl-[ | exit insert mode |
-| Ctrl-c | exit insert mode |
-| gc | toggles line comment, example `gcc` to toggle line comment for current line and `gc2j` to toggle line comments for the current line and the next line |
-| gC | toggles block comment, example `gCi` to comment out everything within parenthesis |
-| :sp | spit current document in two horrizontally |
-| :vs | spit current document in two vertically |
-| Ctrl-ww | window switching |
-
-
-## Verbs
-
-| Command | Use | 
-| - | - | 
-| ciw | change inner word will change the whole word under the cursor |
-| cw | change the word from the current cursor position |
-| / | enter regex search mode |
-| n | find the next instance of the search term |
-| N | find the previous instance of the search term |
-| . | repeat last change (extremely powerful) |
-| ^ or 0 | move to the beginning of the line |
-| Shift+0 | move to the end of the line | 
-| Shift+i | move to the beginning of the line and switch to insert mode |
-| $ | move to the end of the line |
-| vap | visually select paragraph under cursor | 
-
-## Nouns/Movements
-
-Nouns or movements are commands for moving within the document or representing an area within a document.
-
-| Command | Use | 
-| - | - | 
-| h, j, k, l | equivalent to the arrow keys left, down, up, right |
-| H | move to top of screen |
-| M | move to middle of screen |
-| L | move to bottom of screen |
-| zz | scroll the line with the cursor to the center of the screen |
-| zt | scroll the line with the cursor to the top |
-| zb | scroll the line with the cursor to the bottom |
-| Ctrl-D | move half-page down |
-| Ctrl-U | move half-page up |
-| Ctrl-B | page up |
-| Ctrl-F | page down |
-| 0 | move to the very beginning of the current line |
-| ^ | move to the first non-whitespace character on the line |
-| $ | move to the end of the line |
-| w, b | move to the next/previous word |
-| W, B | as w/b only Words are bigger |
-| ), ( | move to the next/previous sentence |
-| }, { | move to the next/previous paragraph |
-| /[regexp] | like t but instead of finding a character it finds a regexp |
-| % | jump to the matching parenthesis (vim understands nested parenthesis) |
-| _ | move to the current line (useful for making commands line-based) |
-| #[char] | jump to the previous instance of the word under [char] |
-| >> | indent line |
-| << | outdent line |
-| *[char] | jump to the next instance of the word under [char] |
-| ddp / ddkP | are common commands to move a line one down / up |
-
-
-
-Registers in Vim let you run actions or commands on text stored within them. To access a register, you type "a before a command, where a is the name of a register. If you want to copy the current line into register k, you can type
-
-"kyy
-
-Or you can append to a register by using a capital letter
-
-"Kyy
-
-You can then move through the document and paste it elsewhere using
-
-"kp
-
-To paste from system clipboard on Linux
-
-"+p
-
-To paste from system clipboard on Windows (or from "mouse highlight" clipboard on Linux)
-
-"*p
-
-To access all currently defined registers type
-
-:reg
-
-
-------------
-
-The "." command repeats the last change made in normal mode. For example, if you press dw to delete a word, you can then press . to delete another word (. is dot, aka period or full stop).
-
-
-http://vim.wikia.com/wiki/Using_marks
-
-
-
-`dat` = delete current tag (and all its content)
-
-`f[caracther]` = find character and move cursor at that position
-`t[caracther]` = find character and move cursor at one position before
-
-`H` go to higher part of the screen
-`M` go to the midle part of the screen
-`L` go to the lower part of the screen
-
-
-https://github.com/gibbok/vim-cheat-sheet
-
-
-f{character}
-find and move character to target
-
-;
-move to next command
-
-t{character}
-find and move one character before target
-
-`vi[`
-visual select inside [
-if in visual more we select
-`i{character}` we can expand the selection to that character, similar including `a{character}`
-
-
-
-Next tab: gt
-
-Prior tab: gT
-
-Numbered tab: nnngt
-Close all tabs and keep open only the focused one: :tabonly
-
-:split (split into two windows, top half and bottom half) and :vsplit (left and right) commands. You can then use Ctrl-W direction to switch windows (where direction is one of the normal hjkl cursor movement keys, or the arrow keys)
-A shortcut for a horizontal split is :sp, with the vertical shortcut being :vsp
-
-Focus is in the new split initially. To move between splits first press Ctrl-w 
-
-Ctrl-y Moves screen up one line
-Ctrl-e Moves screen down one line
-Ctrl-u Moves cursor & screen up ½ page
-Ctrl-d Moves cursor & screen down ½ page
-Ctrl-b Moves screen up one page, cursor to last line
-Ctrl-f Moves screen down one page, cursor to first line
-Ctrl-y and Ctrl-e only change the cursor position if it would be moved off screen.
-
-zt - move current line to the top of the screen
-
-zb - move current line to the bottom of the screen
-
-t = till
-example: dt. (delete till dot)
-or df.(delete till dot included)
-You can remember these commands as `find` and `t`ill. 
-
-
-https://www.youtube.com/watch?v=5r6yzFEXajQ&t=1269s
-
-CTRL-O : Retrace your movements in file in backwards.
-
-CTRL-I : Retrace your movements in file in forwards.
-From the vim help files:
-
-
-The quickest way is to hit either:
-
-(two apostrophes) or
-```
-''
-```
-
-(two backticks):
-
-```
-``
-```
-
-Note that the difference is that the backtick goes to the same location on the line, whereas the apostrophe goes to the start of the line. On a UK keyboard, the apostrophe is more accessible, so I tend to use that one. There are loads of useful marks like this, see :help mark-motions.
-
----
-The command dw will delete from the current cursor position to the beginning of the next word character. The command d$ (note, that's a dollar sign, not an 'S') will delete from the current cursor position to the end of the current line. D is a synonym for d$.
-
-
-https://www.youtube.com/watch?v=wlR5gYd6um0
-
-To delete forward up to character 'X' type dtX
-
-To delete forward through character 'X' type dfX
-
-To delete backward up to character 'X' type dTX
-
-To delete backward through character 'X' type dFX
-
-Move to the end of the line in normal mode in VIM: Jump to last non blank `g_` or use `$` which moves to the last character on the line.
-
-
-
- ~    : Changes the case of current character
-
- guu  : Change current line from upper to lower.
-
- gUU  : Change current LINE from lower to upper.
-
- guw  : Change to end of current WORD from upper to lower.
-
- guaw : Change all of current WORD to lower.
-
- gUw  : Change to end of current WORD from lower to upper.
-
- gUaw : Change all of current WORD to upper.
-
- g~~  : Invert case to entire line
-
- guG : Change to lowercase until the end of document.
- 
- 
- https://vim.fandom.com/wiki/All_the_right_moves
- 
- J joins the line the cursor is on with the line below.
-
-[vim graphical cheat sheet pdf](https://eggplant.pro/blog/wp-content/uploads/2016/12/vi-vim-tutorial.pdf)
-
-
-Set VIM mode for zsh
-https://unix.stackexchange.com/questions/547/make-my-zsh-prompt-show-mode-in-vi-mode?noredirect=1&lq=1
-
-Delete all content of the document
-:%d
-
-How can i do a 'change word' using the current paste buffer
-With your word yanked, cursor over the word you want to replace and do `viwp`. Which is visual select inner word and paste.
+<h2 align="center"><img src="https://raw.githubusercontent.com/VSCodeVim/Vim/master/images/icon.png" height="128"><br>VSCodeVim</h2>
+<p align="center"><strong>Vim Shortcuts for Visual Studio Code</strong></p>
+
+<strong>Table of Contents</strong>
+
+- [Getting Started](#GettingStarted) - [Navigating](#Navigating) - [Words](#Words) - [Line](#Line) - [Character](#Character) - [Document](#Document) - [Window](#Window) - [Tab Pages](#TabPages) - [Editing](#Editing) - [Exiting Insert Mode](#ExitingInsertMode) - [Clipboard](#Clipboard) - [Visual Mode](#VisualMode) - [In Visual Mode](#InVisualMode) - [Operators](#Operators) - [Operators List](#OperatorsList) - [Operators Examples](#OperatorsExamples) - [Text Objects](#TextObjects) - [TextObjectsUsageExamples](#TextObjectsExamples) - [Misc](#Misc) - [Folds](#Folds) - [Advanced Navigation](#AdvancedNavigation) - [Jumping](#Jumping) - [Counters](#Counters) - [Windows](#Windows) - [Tags](#Tags) - [Case](#Case) - [Marks](#Marks) - [Command Line](#CommandLine) - [Commenting](#Commenting) - [Surround](#Surround) - [VSCodeVim Tricks](#VSCodeVimTricks)
+
+## GettingStarted
+
+| Shortcut       | Description                      |
+| -------------- | -------------------------------- |
+| `:qa`          | Close all files                  |
+| `:qa!`         | Close all files, abandon changes |
+| `:w`           | Save                             |
+| `:wq` _/_ `:x` | Save and close file              |
+| `:q`           | Close file                       |
+| `:q!`          | Close file, abandon changes      |
+
+### Navigating
+
+| Shortcut            | Description       |
+| ------------------- | ----------------- |
+| `h` `j` `k` `l`     | Arrow keys        |
+| `<C-U>` _/_ `<C-D>` | Page up/page down |
+
+#### Words
+
+| Shortcut     | Description               |
+| ------------ | ------------------------- |
+| `b` _/_ `w`  | Previous/next word        |
+| `ge` _/_ `e` | Previous/next end of word |
+
+#### Semantically
+
+| Shortcut | Description      |
+| -------- | ---------------- |
+| `gd`     | Go to definition |
+| `gf`     | Go to file       |
+
+#### Line
+
+| Shortcut     | Description                        |
+| ------------ | ---------------------------------- |
+| `0` _(zero)_ | Start of line                      |
+| `^`          | Start of line _(after whitespace)_ |
+| `$`          | End of line                        |
+| `}`          | Jumps entire paragraphs downwards  |
+| `{`          | similarly but upwards              |
+
+#### Character
+
+| Shortcut | Description                      |
+| -------- | -------------------------------- |
+| `fc`     | Go forward to character `c`      |
+| `Fc`     | Go backward to character `c`     |
+| `tc`     | Go forward till character `c`    |
+| `Tc`     | Go backward till character `c`   |
+| `;c`     | Go to next occurrence of `c`     |
+| `,c`     | Go to previous occurrence of `c` |
+
+#### Document
+
+| Shortcut | Description    |
+| -------- | -------------- |
+| `gg`     | First line     |
+| `G`      | Last line      |
+| `:n`     | Go to line `n` |
+| `nG`     | Go to line `n` |
+
+#### Window
+
+| Shortcut | Description              |
+| -------- | ------------------------ |
+| `zz`     | Center this line         |
+| `zt`     | Top this line            |
+| `zb`     | Bottom this line         |
+| `H`      | Move to top of screen    |
+| `M`      | Move to middle of screen |
+| `L`      | Move to bottom of screen |
+
+#### Tab Pages
+
+| Shortcut        | Description                   |
+| --------------- | ----------------------------- |
+| `:tabnew:`      | New tab                       |
+| `:tabc`         | Close current tab             |
+| `:tabo`         | Close all tabs except current |
+| `gt` or `:tabn` | Go to next tab                |
+| `gT`or `:tabp`  | Go to previous tab            |
+| `2gt`           | Move to second tab            |
+
+### Editing
+
+| Shortcut | Description                         |
+| -------- | ----------------------------------- |
+| `a`      | Append                              |
+| `i`      | Insert                              |
+| `o`      | Next line                           |
+| `O`      | Previous line                       |
+| ---      | ---                                 |
+| `s`      | Delete char and insert              |
+| `S`      | Delete line and insert              |
+| `C`      | Delete until end of line and insert |
+| ---      | ---                                 |
+| `r`      | Replace one character               |
+| `R`      | Enter Replace mode                  |
+| ---      | ---                                 |
+| `u`      | Undo changes                        |
+| `<C-R>`  | Redo changes                        |
+
+### ExitingInsertMode
+
+| Shortcut          | Description                                 |
+| ----------------- | ------------------------------------------- |
+| `Esc` _/_ `<C-[>` | Exit insert mode                            |
+| `<C-C>`           | Exit insert mode, and abort current command |
+
+### Clipboard
+
+| Shortcut | Description         |
+| -------- | ------------------- |
+| `x`      | Delete character    |
+| ---      | ---                 |
+| `dd`     | Delete line _(Cut)_ |
+| `yy`     | Yank line _(Copy)_  |
+| ---      | ---                 |
+| `p`      | Paste               |
+| `P`      | Paste before        |
+
+### VisualMode
+
+| Shortcut | Description             |
+| -------- | ----------------------- |
+| `v`      | Enter visual mode       |
+| `V`      | Enter visual line mode  |
+| `<C-V>`  | Enter visual block mode |
+
+#### InVisualMode
+
+| Shortcut    | Description             |
+| ----------- | ----------------------- |
+| `d` _/_ `x` | Delete selection        |
+| `s`         | Replace selection       |
+| `y`         | Yank selection _(Copy)_ |
+
+## Operators
+
+Operators let you operate in a range of text (defined by _motion_). These are performed in normal mode.
+
+|          |        |
+| -------- | ------ |
+| `d`      | `w`    |
+| Operator | Motion |
+
+### OperatorsList
+
+| Shortcut | Description                     |
+| -------- | ------------------------------- |
+| `d`      | Delete                          |
+| `y`      | Yank _(copy)_                   |
+| `c`      | Change _(delete then insert)_   |
+| ---      | ---                             |
+| `>`      | Indent right                    |
+| `<`      | Indent left                     |
+| ---      | ---                             |
+| `g~`     | Swap case                       |
+| `gU`     | Uppercase                       |
+| `gu`     | Lowercase                       |
+| ---      | ---                             |
+| `!`      | Filter through external program |
+
+See `:help operator`
+
+### OperatorsExamples
+
+Combine operators with _motions_ to use them.
+
+| Shortcut               | Description                               |
+| ---------------------- | ----------------------------------------- |
+| `d`_d_                 | _(repeat the letter)_ Delete current line |
+| `d`_w_                 | Delete to next word                       |
+| `d`_b_                 | Delete to beginning of word               |
+| _2_`dd`                | Delete 2 lines                            |
+| `d`_ip_                | Delete a text object _(inside paragraph)_ |
+| _(in visual mode)_ `d` | Delete selection                          |
+
+See: `:help motion.txt`
+
+## TextObjects
+
+Text objects let you operate (with an _operator_) in or around text blocks (_objects_).
+
+|          |                      |             |
+| -------- | -------------------- | ----------- |
+| `v`      | `i`                  | `p`         |
+| Operator | [i]nside or [a]round | Text object |
+
+| Shortcut                                 | Description           |
+| ---------------------------------------- | --------------------- |
+| `p`                                      | Paragraph             |
+| `w`                                      | Word                  |
+| `s`                                      | Sentence              |
+| ---                                      | ---                   |
+| `[` `(` `{` `<`                          | A [], (), or {} block |
+| `'` `"` <code>`</code> | A quoted string |
+| ---                                      | ---                   |
+| `b`                                      | A block [(            |
+| `B`                                      | A block in [{         |
+| `t`                                      | A XML tag block       |
+
+### TextObjectsExamples
+
+| Shortcut    | Description                        |
+| ----------- | ---------------------------------- |
+| `vip`       | Select paragraph                   |
+| `vipipipip` | Select more                        |
+| ---         | ---                                |
+| `yip`       | Yank inner paragraph               |
+| `yap`       | Yank paragraph (including newline) |
+| ---         | ---                                |
+| `dip`       | Delete inner paragraph             |
+| `cip`       | Change inner paragraph             |
+
+## Misc
+
+| Shortcut   | Description                                       |
+| ---------- | ------------------------------------------------- |
+| `.`        | Repeat last command                               |
+| `]p`       | Paste under the current indentation level         |
+| ---        | ---                                               |
+| `:ff=unix` | Convert Windows line endings to Unix line endings |
+
+### Folds
+
+| Shortcut      | Description                  |
+| ------------- | ---------------------------- |
+| `zo` _/_ `zO` | Open                         |
+| `zc` _/_ `zC` | Close                        |
+| `za` _/_ `zA` | Toggle                       |
+| ---           | ---                          |
+| `zv`          | Open folds for this line     |
+| ---           | ---                          |
+| `zM`          | Close all                    |
+| `zR`          | Open all                     |
+| ---           | ---                          |
+| `zm`          | Fold more _(foldlevel += 1)_ |
+| `zr`          | Fold less _(foldlevel -= 1)_ |
+| ---           | ---                          |
+| `zx`          | Update folds                 |
+
+Uppercase ones are recursive (eg, `zO` is open recursively).
+
+### AdvancedNavigation
+
+| Shortcut       | Description                |
+| -------------- | -------------------------- |
+| `[(` `[{` `[<` | Previous `(` or `{` or `<` |
+| `])`           | Next                       |
+| ---            | ---                        |
+| `[m`           | Previous method start      |
+| `[M`           | Previous method end        |
+
+### Jumping
+
+| Shortcut | Description                  |
+| -------- | ---------------------------- |
+| `<C-O>`  | Go back to previous location |
+| `<C-I>`  | Go forward                   |
+| ---      | ---                          |
+| `gf`     | Go to file in cursor         |
+
+### Counters
+
+| Shortcut | Description      |
+| -------- | ---------------- |
+| `<C-A>`  | Increment number |
+| `<C-X>`  | Decrement        |
+
+### Windows
+
+| `z{height}<Cr>` | Resize pane to `{height}` lines tall |
+
+### Tags
+
+| Shortcut             | Description                                     |
+| -------------------- | ----------------------------------------------- |
+| `:tag Classname`     | Jump to first definition of Classname           |
+| ---                  | ---                                             |
+| `<C-]>`              | Jump to definition                              |
+| `g]`                 | See all definitions                             |
+| `<C-T>`              | Go back to last tag                             |
+| `<C-O> <C-I>`        | Back/forward                                    |
+| ---                  | ---                                             |
+| `:tselect Classname` | Find definitions of Classname                   |
+| `:tjump Classname`   | Find definitions of Classname (auto-select 1st) |
+
+### Case
+
+| Shortcut | Description                          |
+| -------- | ------------------------------------ |
+| `~`      | Toggle case (Case => cASE)           |
+| `gU`     | Uppercase                            |
+| `gu`     | Lowercase                            |
+| ---      | ---                                  |
+| `gUU`    | Uppercase current line (also `gUgU`) |
+| `guu`    | Lowercase current line (also `gugu`) |
+
+Do these in visual or normal mode.
+
+### Marks
+
+| Shortcut                                                 | Description                                         |
+| -------------------------------------------------------- | --------------------------------------------------- |
+| <code>`^</code> | Last position of cursor in insert mode |
+| <code>`.</code> | Last change                            |
+| <code>``</code> | Last jump                              |
+| ---                                                      | ---                                                 |
+| `ma`                                                     | Mark this cursor position as `a`                    |
+| <code>`a</code> | Jump to the cursor position`a`         |
+| `'a`                                                     | Jump to the beginning of the line with position `a` |
+
+### CommandLine
+
+| Shortcut     | Description                               |
+| ------------ | ----------------------------------------- |
+| `<C-R><C-W>` | Insert current word into the command line |
+| `<C-R>"`     | Paste from " register                     |
+| `<C-X><C-F>` | Auto-completion of path in insert mode    |
+
+### Commenting
+
+| Shortcut | Description                                    |
+| -------- | ---------------------------------------------- |
+| `gc`     | Toggle Line Comment                            |
+| `gcc`    | Toggle Comment Current Line                    |
+| `gc2j`   | Toggle Comment Current Line and Next Two Lines |
+| `gC`     | Toggle Block Comment                           |
+
+### Surround
+
+| Shortcut                             | Description                                                           |
+| ------------------------------------ | --------------------------------------------------------------------- |
+| `d s <existing char>`                | Delete existing surround                                              |
+| `c s <existing char> <desired char>` | Change surround existing to desired                                   |
+| `y s <motion> <desired char>`        | Surround something with something using motion (as in "you surround") |
+| `S <desired char>`                   | Surround when in visual modes (surrounds full selection)              |
+
+With cursor inside quotes `"test"` type `cs"'` to end up with `'test'`
+
+## Working with multiple files
+
+| Shortcut           | Description             |
+| ------------------ | ----------------------- |
+| `<C-w> s` or `:sp` | split window            |
+| `<C-w> v` or `:vs` | split window vertically |
+| `<C-w> w`          | switch windows          |
+| `<C-w> q`          | quit a window           |
+| `<C-w> h`          | move to left window     |
+| `<C-w> j`          | move to below window    |
+| `<C-w> k`          | move to top window      |
+| `<C-w> l`          | move to right window    |
+
+## 🎩 VSCodeVimTricks!
+
+VS Code has a lot of nifty tricks and we try to preserve some of them:
+
+- `gd` - jump to definition.
+- `gq` - on a visual selection reflow and wordwrap blocks of text, preserving commenting style. Great for formatting documentation comments.
+- `gb` - adds another cursor on the next word it finds which is the same as the word under the cursor.
+- `af` - visual mode command which selects increasingly large blocks of text. For example, if you had "blah (foo [bar 'ba|z'])" then it would select 'baz' first. If you pressed `af` again, it'd then select [bar 'baz'], and if you did it a third time it would select "(foo [bar 'baz'])".
+- `gh` - equivalent to hovering your mouse over wherever the cursor is. Handy for seeing types and error messages without reaching for the mouse!
