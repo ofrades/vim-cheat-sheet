@@ -3,7 +3,39 @@
 
 <strong>Table of Contents</strong>
 
-- [Getting Started](#GettingStarted) - [Navigating](#Navigating) - [Words](#Words) - [Line](#Line) - [Character](#Character) - [Document](#Document) - [Window](#Window) - [Tab Pages](#TabPages) - [Editing](#Editing) - [Exiting Insert Mode](#ExitingInsertMode) - [Clipboard](#Clipboard) - [Visual Mode](#VisualMode) - [In Visual Mode](#InVisualMode) - [Operators](#Operators) - [Operators List](#OperatorsList) - [Operators Examples](#OperatorsExamples) - [Text Objects](#TextObjects) - [TextObjectsUsageExamples](#TextObjectsExamples) - [Misc](#Misc) - [Folds](#Folds) - [Advanced Navigation](#AdvancedNavigation) - [Jumping](#Jumping) - [Counters](#Counters) - [Windows](#Windows) - [Tags](#Tags) - [Case](#Case) - [Marks](#Marks) - [Command Line](#CommandLine) - [Commenting](#Commenting) - [Surround](#Surround) - [VSCodeVim Tricks](#VSCodeVimTricks)
+- [Getting Started](#GettingStarted)
+- [Navigating](#Navigating)
+- [Words](#Words)
+- [Line](#Line)
+- [Character](#Character) 
+- [Document](#Document)
+- [Window](#Window)
+- [Tab Pages](#TabPages)
+- [Editing](#Editing)
+- [Exiting Insert Mode](#ExitingInsertMode)
+- [Clipboard](#Clipboard)
+- [Visual Mode](#VisualMode)
+- [In Visual Mode](#InVisualMode)
+- [Operators](#Operators)
+- [Operators List](#OperatorsList)
+- [Operators Examples](#OperatorsExamples)
+- [Text Objects](#TextObjects)
+- [TextObjectsUsageExamples](#TextObjectsExamples)
+- [Misc](#Misc)
+- [Folds](#Folds)
+- [Advanced Navigation](#AdvancedNavigation)
+- [Jumping](#Jumping)
+- [Counters](#Counters)
+- [Windows](#Windows)
+- [Tags](#Tags)
+- [Case](#Case)
+- [Marks](#Marks)
+- [Command Line](#CommandLine)
+- [Commenting](#Commenting)
+- [Surround](#Surround)
+- [Working with multiple files](MultipleFiles)
+
+- [VSCodeVim Tricks](#VSCodeVimTricks)
 
 ## GettingStarted
 
@@ -347,7 +379,7 @@ Do these in visual or normal mode.
 
 With cursor inside quotes `"test"` type `cs"'` to end up with `'test'`
 
-## Working with multiple files
+## MultipleFiles
 
 | Shortcut           | Description             |
 | ------------------ | ----------------------- |
