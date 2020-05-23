@@ -1,9 +1,6 @@
 <h2 align="center"><img src="https://raw.githubusercontent.com/VSCodeVim/Vim/master/images/icon.png" height="128"><br>VSCodeVim</h2>
 <p align="center"><strong>Vim Cheat Sheet for Visual Studio Code</strong></p>
 
-<h2 align="center"><img src="https://raw.githubusercontent.com/VSCodeVim/Vim/master/images/icon.png" height="128"><br>VSCodeVim</h2>
-<p align="center"><strong>Vim Shortcuts for Visual Studio Code</strong></p>
-
 <strong>Table of Contents</strong>
 
 - [Getting Started](#GettingStarted) - [Navigating](#Navigating) - [Words](#Words) - [Line](#Line) - [Character](#Character) - [Document](#Document) - [Window](#Window) - [Tab Pages](#TabPages) - [Editing](#Editing) - [Exiting Insert Mode](#ExitingInsertMode) - [Clipboard](#Clipboard) - [Visual Mode](#VisualMode) - [In Visual Mode](#InVisualMode) - [Operators](#Operators) - [Operators List](#OperatorsList) - [Operators Examples](#OperatorsExamples) - [Text Objects](#TextObjects) - [TextObjectsUsageExamples](#TextObjectsExamples) - [Misc](#Misc) - [Folds](#Folds) - [Advanced Navigation](#AdvancedNavigation) - [Jumping](#Jumping) - [Counters](#Counters) - [Windows](#Windows) - [Tags](#Tags) - [Case](#Case) - [Marks](#Marks) - [Command Line](#CommandLine) - [Commenting](#Commenting) - [Surround](#Surround) - [VSCodeVim Tricks](#VSCodeVimTricks)
