@@ -60,6 +60,7 @@
 | ------------ | ------------------------- |
 | `b` _/_ `w`  | Previous/next word        |
 | `ge` _/_ `e` | Previous/next end of word |
+| `leader` before one of above | Previous/next Camel case |
 
 #### Semantically
 
