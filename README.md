@@ -52,7 +52,10 @@
 | Shortcut            | Description       |
 | ------------------- | ----------------- |
 | `h` `j` `k` `l`     | Arrow keys        |
-| `<C-U>` _/_ `<C-D>` | Page up/page down |
+| `{` _/_ `}` | Previous/Next paragraph |
+| `<C-U>` _/_ `<C-D>` | Scrool by half page |
+| `<C-Y>` _/_ `<C-E>` | Scrool by line |
+
 
 #### Words
 
@@ -365,10 +368,11 @@ Do these in visual or normal mode.
 | ------------------------------------ | --------------------------------------------------------------------- |
 | `d s <existing char>`                | Delete existing surround                                              |
 | `c s <existing char> <desired char>` | Change surround existing to desired                                   |
-| `y s <motion> <desired char>`        | Surround something with something using motion (as in "you surround") |
+| `y s <motion> <desired char>`        | Add surround   |
 | `S <desired char>`                   | Surround when in visual modes (surrounds full selection)              |
 
 With cursor inside quotes `"test"` type `cs"'` to end up with `'test'`
+With cursor in word `test` type `ysw"` to end up with `"test"`
 
 ## MultipleFiles
 
