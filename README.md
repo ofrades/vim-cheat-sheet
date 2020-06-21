@@ -259,6 +259,7 @@ Text objects let you operate (with an _operator_) in or around text blocks (_obj
 | ---         | ---                                |
 | `dip`       | Delete inner paragraph             |
 | `cip`       | Change inner paragraph             |
+| `>iB`       | Indent inner block                 |
 
 ### Folds
 
