@@ -4,6 +4,7 @@
 <strong>Table of Contents</strong>
 
 - [Getting Started](#GettingStarted)
+  - [Save & Close](#SaveClose)
   - [Navigating](#Navigating)
   - [Words](#Words)
   - [Line](#Line)
@@ -36,6 +37,8 @@
 - [VSCodeVim Tricks](#VSCodeVimTricks)
 
 ## GettingStarted
+
+### SaveClose
 
 | Shortcut       | Description                      |
 | -------------- | -------------------------------- |
@@ -114,7 +117,7 @@
 | `M`      | Move to middle of screen |
 | `L`      | Move to bottom of screen |
 
-#### Tab Pages
+#### TabPages
 
 | Shortcut        | Description                   |
 | --------------- | ----------------------------- |
