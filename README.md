@@ -49,21 +49,22 @@
 
 ### Navigating
 
-| Shortcut            | Description       |
-| ------------------- | ----------------- |
-| `h` `j` `k` `l`     | Arrow keys        |
-| `{` _/_ `}` | Previous/Next paragraph |
-| `<C-U>` _/_ `<C-D>` | Scrool by half page |
-| `<C-Y>` _/_ `<C-E>` | Scrool by line |
+| Shortcut            | Description              |
+| ------------------- | ------------------------ |
+| `<C-F>` _/_ `<C-B>` | Scrool Down/Up page      |
+| `<C-D>` _/_ `<C-U>` | Scrool Down/Up half page |
+| `<C-Y>` _/_ `<C-E>` | Scrool Down/Up line      |
+| `{` _/_ `}`         | Previous/Next paragraph  |
+| `h` `j` `k` `l`     | Arrow keys               |
 
 
 #### Words
 
-| Shortcut     | Description               |
-| ------------ | ------------------------- |
-| `b` _/_ `w`  | Previous/next word        |
-| `ge` _/_ `e` | Previous/next end of word |
-| `leader` before one of above | Previous/next Camel case |
+| Shortcut     | Description                      |
+| ------------ | -------------------------------- |
+| `b` _/_ `w`  | Previous/Next word               |
+| `ge` _/_ `e` | Previous//Next end of word       |
+| `leader` before above shortcut | P/N Camel case |
 
 #### Semantically
 
