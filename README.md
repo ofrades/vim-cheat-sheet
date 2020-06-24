@@ -286,7 +286,7 @@ Uppercase ones are recursive (eg, `zO` is open recursively).
 
 | Shortcut      | Description                  |
 | ------------- | ---------------------------- |
-| `*`           | For word under cursor search next occurrence|
+| `*` _/_ `#`   | For word under cursor search next/previows occurrence|
 |`/`|Search forwards|
 |`?`|Search backwards|
 
