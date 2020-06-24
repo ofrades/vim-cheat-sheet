@@ -121,7 +121,7 @@
 
 | Shortcut        | Description                   |
 | --------------- | ----------------------------- |
-| `:tabnew:`      | New tab                       |
+| `:tabnew`      | New tab                       |
 | `:tabc`         | Close current tab             |
 | `:tabo`         | Close all tabs except current |
 | `gt` or `:tabn` | Go to next tab                |
