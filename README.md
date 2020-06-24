@@ -23,6 +23,7 @@
   - [Text Objects](#TextObjects)
   - [TextObjectsUsageExamples](#TextObjectsExamples)
 - [Folds](#Folds)
+- [Search](#Search)
 - [Advanced Navigation](#AdvancedNavigation)
 - [Jumping](#Jumping)
 - [Counters](#Counters)
@@ -280,6 +281,15 @@ Text objects let you operate (with an _operator_) in or around text blocks (_obj
 | `zx`          | Update folds                 |
 
 Uppercase ones are recursive (eg, `zO` is open recursively).
+
+### Search
+
+| Shortcut      | Description                  |
+| ------------- | ---------------------------- |
+| `*`           | For word under cursor search next occurrence|
+|`/`|Search forwards|
+|`?`|Search backwards|
+
 
 ### AdvancedNavigation
 
